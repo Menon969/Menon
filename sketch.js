@@ -1,22 +1,22 @@
 //variaveis da bolinha
-let xBolinha = 300;
-let yBolinha = 200;
+let xBolinha = 600;
+let yBolinha = 300;
 let diametro = 20;
 let raio = diametro / 2;
 
 //velocidade da bolinha
-let velocidadeXBolinha = 6;
-let velocidadeYBolinha = 6;
+let velocidadeXBolinha = 8;
+let velocidadeYBolinha = 8;
 let raqueteComprimento = 10;
 let raqueteAltura = 90;
 
 //variavel da raquete
 let xRaquete = 5;
-let yRaquete = 150;
+let yRaquete = 250;
 
 //variavel do oponente
-let xRaqueteOponente = 585;
-let yRaqueteOponente = 150;
+let xRaqueteOponente = 1185;
+let yRaqueteOponente = 250;
 let velocidadeYOponente;
 
 //placa do jogo
@@ -24,7 +24,7 @@ let meusPontos = 0;
 let pontosDoOponente = 0; 
 
 function setup() {
-  createCanvas(600, 400);  
+  createCanvas(1200, 600);  
 }
 
 function draw() {
@@ -67,10 +67,10 @@ function mostraRaquete(x, y){
 }
 
 function movimentaMinhaRaquete(){
-  if (keyIsDown(UP_ARROW)){
+  if (keyIsDown(87)){
     yRaquete -= 10;
   }
-   if (keyIsDown(DOWN_ARROW)){
+   if (keyIsDown(83)){
     yRaquete += 10;
   }
 }  
@@ -89,10 +89,10 @@ function verificaColisaoRaquete(x,y) {
 }
 
 function movimentaRaqueteOponente(){
-  if (keyIsDown(87)){
+  if (keyIsDown(UP_ARROW)){
     yRaqueteOponente -= 10;
   }
-   if (keyIsDown(83)){
+   if (keyIsDown(DOWN_ARROW)){
     yRaqueteOponente += 10;
   }
 }
@@ -100,19 +100,19 @@ function movimentaRaqueteOponente(){
 function incluiPlacar(){
   stroke(255);
   textAlign(CENTER);
-  textSize(16);
+  textSize(20);
   fill(color(150, 10, 255));
-  rect(150, 10, 40, 20);
+  rect(370, 10, 60, 30);
   fill(255);
-  text(meusPontos, 170, 26);
+  text(meusPontos, 400, 30);
   fill(color(150, 10, 255));
-  rect(450, 10, 40, 20);
+  rect(770, 10, 60, 30);
   fill(255);
-  text(pontosDoOponente, 470, 26);
+  text(pontosDoOponente, 800, 30);
 }
 
 function marcaPonto(){
-  if (xBolinha > 590){
+  if (xBolinha > 1190){
     meusPontos += 1;
   }
   if (xBolinha < 10){
