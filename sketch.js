@@ -23,15 +23,8 @@ let velocidadeYOponente;
 let meusPontos = 0;
 let pontosDoOponente = 0; 
 
-//sons do jogo
-let raquetada;
-let ponto;
-let trilha;
-
 function setup() {
-  createCanvas(600, 400);
-  //trilha.loop();
-  
+  createCanvas(600, 400);  
 }
 
 function draw() {
@@ -50,7 +43,6 @@ function draw() {
   marcaPonto();
   bolinhaNaoFicaPresa();
 }
-
 
 function mostraBolinha(){
   circle(xBolinha,yBolinha,diametro);
@@ -133,4 +125,3 @@ function bolinhaNaoFicaPresa(){
     xBolinha = 20
     }
 }
-
